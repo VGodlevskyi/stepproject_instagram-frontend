@@ -9,13 +9,13 @@ const __PORT = process.env.PORT || 3000
 app.use(server.static(path.join(__dirname, 'build')))
 
 app.use('/api', createProxyMiddleware({
-        target: 'http://localhost:3500/',
+        target: 'https://stepproject-instagram-backend.herokuapp.com/',
         changeOrigin: true,
     })
 );
 
 app.use('/auth', createProxyMiddleware({
-        target: 'http://localhost:3500/',
+        target: 'https://stepproject-instagram-backend.herokuapp.com/',
         changeOrigin: true,
     })
 );
